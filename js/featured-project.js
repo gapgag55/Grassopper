@@ -1,0 +1,1 @@
+!function(t){function e(){this.statement(),console.log("OK")}var n=new ScrollMagic.Controller;e.prototype.statement=function(){var e=t(".statement"),o=(new TimelineMax).from(e,100,{autoAlpha:0}).to(e,100,{autoAlpha:0});new ScrollMagic.Scene({triggerElement:".statement",triggerHook:.1,duration:"100%"}).setPin(".statement").setTween(o).addTo(n)},Modernizr.touch||new e}(jQuery);

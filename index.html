@@ -1,116 +1,291 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Studio Grasshopper</title>
-
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--<link rel="apple-touch-icon" href="apple-touch-icon.png">-->
-
-        <link rel="stylesheet" href="css/styles.css">
-
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    </head>
-    <body>
-        
-        <header class="flex">         
-            <svg width="48px" height="52px" viewBox="109 34 48 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <defs></defs>
-                <g id="logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(110.000000, 35.000000)">
-                    <g id="body" transform="translate(8.000000, 10.000000)" stroke="#000000" stroke-width="2">
-                        <path d="M1,4.77993865 C-1,8.5598773 2.46340323,38.828609 15.2317016,38.828609 C28,38.828609 31,7 29,4 C27,1 25.7334625,-5.68434189e-14 15.2317016,-5.68434189e-14 C4.72994075,-5.52942102e-14 3,1 1,4.77993865 Z" id="Path-2"></path>
-                    </g>
-                    <g id="head" transform="translate(10.000000, 0.000000)" stroke="#000000" stroke-width="2">
-                        <path d="M5,10.2797555 C5,10.2797555 6.5818059,3.61333527 12.943971,3.61333527 C19.3061362,3.61333527 20.8879421,10.2797555 20.8879421,10.2797555" id="Path-3"></path>
-                        <path d="M7.50122101,6 C7.50122101,6 2.62530525,3.75 1.87530525,3 C1.12530525,2.25 0.375305253,0 0.375305253,0" id="Path-4"></path>
-                        <path d="M25.1259158,6 C25.1259158,6 20.25,3.75 19.5,3 C18.75,2.25 18,0 18,0" id="Path-4" transform="translate(21.562958, 3.000000) scale(-1, 1) translate(-21.562958, -3.000000) "></path>
-                    </g>
-                    <g id="Leg" transform="translate(0.000000, 3.000000)" stroke="#000000" stroke-width="2">
-                        <path d="M9,18 C9,18 3.46798254,13.3291597 1.82344663,9.83416647 C0.178910711,6.33917326 0.530270676,-2.84217094e-14 0.530270676,-2.84217094e-14" id="Path-4"></path>
-                        <path d="M9.02893096,39 C9.02893096,39 5.4618097,38.1066606 4,35 C2.5381903,31.8933394 1.50028267,23 1.50028267,23" id="Path-4" transform="translate(5.264607, 31.000000) scale(1, -1) translate(-5.264607, -31.000000) "></path>
-                        <path d="M10,47 C10,47 8.4618097,46.1066606 7,43 C5.5381903,39.8933394 8,29 8,29" id="Path-4" transform="translate(8.268165, 38.000000) scale(1, -1) translate(-8.268165, -38.000000) "></path>
-                        <path d="M39.4636703,47 C39.4636703,47 37.92548,46.1066606 36.4636703,43 C35.0018606,39.8933394 37.4636703,29 37.4636703,29" id="Path-4" transform="translate(37.731835, 38.000000) scale(-1, -1) translate(-37.731835, -38.000000) "></path>
-                        <path d="M44.5286483,39 C44.5286483,39 40.961527,38.1066606 39.4997173,35 C38.0379076,31.8933394 37,23 37,23" id="Path-4" transform="translate(40.764324, 31.000000) scale(-1, -1) translate(-40.764324, -31.000000) "></path>
-                        <path d="M45.501221,18 C45.501221,18 39.9692036,13.3291597 38.3246676,9.83416647 C36.6801317,6.33917326 37.0314917,2.84217094e-14 37.0314917,2.84217094e-14" id="Path-4" transform="translate(41.250611, 9.000000) scale(-1, 1) translate(-41.250611, -9.000000) "></path>
-                    </g>
-                </g>
-            </svg>
-            <nav>             
-                <svg width="28px" height="18px" viewBox="1367 32 28 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <defs></defs>
-                    <g id="Menu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(1367.000000, 32.000000)">
-                        <path d="M26,4 L1,4 C0.286,4 0.011,2.964 0.011,2.261 C0.011,1.558 0.589,0.99 1.303,0.99 L25.709,0.99 C26.422,0.99 27.001,1.558 27.001,2.261 C27.001,2.964 26.714,4 26,4 L26,4 Z M1,8 L26,8 C26.714,8 27,8.297 27,9 C27,9.702 26.714,11 26,11 L1,11 C0.286,11 0,9.702 0,9 C0,8.297 0.286,8 1,8 L1,8 Z M8,15 L26,15 C26.714,15 27.001,16.034 27.001,16.736 C27.001,17.439 26.714,18 26,18 L8,18 C7.286,18 7.181,17.439 7.181,16.736 C7.181,16.034 7.286,15 8,15 L8,15 Z" id="Shape" fill="#323C47"></path>
-                    </g>
-                </svg>
-            </nav>
-        </header>
-
-        <div class="wrapper">
-            <section class="pre-statement">
-                <h1>Studio Grasshopper</h1>
-                <h2>We do the brand by Architect Work</h2>
-                <p>Craft. Styled. Authentic</p>
-
-                <div class="background" style="background-image: url('img/bedroom.png');"></div>
-
-                <div class="statement">
-                    <h3>Statement</h3>
-                    <p>The protons and neutrons in the nucleus are attracted to each other by a different force, the nuclear force, which is usually stronger than the electromagnetic force repelling the positively charged protons from one another. The protons and neutrons in the nucleus are attracted to each other by a different force, the nuclear force, which is usually stronger than the electromagnetic force repelling the positively charged protons from one another. The protons and neutrons in the nucleus are attracted to each other by a different force, the nuclear force, which is usually stronger than the electromagnetic force repelling the positively charged protons from one another. </p>
-                </div>
-            </section>
-
-            <section class="feature">
-                <span>Featured</span>
-                <div class="slide">
-                    <ul>
-                        <li class="is-active" data-color="#2ecc71">
-                            <h2>THE ADDRESS 24</h2>
-                            <div class="background" style="background-image: url('img/bedroom.png');"></div>
-                            <a href="#">view our thought</a>
-                        </li>
-                        <li data-color="#3498db">
-                            <h2>THE ADDRESS 25</h2>
-                            <div class="background" style="background-image: url('img/bedroom.png');"></div>
-                            <a href="#">view our thought</a>
-                        </li>
-                        <li data-color="#e74c3c">
-                            <h2>THE ADDRESS 24</h2>
-                            <div class="background" style="background-image: url('img/bedroom.png');"></div>
-                            <a href="#">view our thought</a>
-                        </li>
-                        <li data-color="#f1c40f">
-                            <h2>THE ADDRESS 24</h2>
-                            <div class="background" style="background-image: url('img/bedroom.png');"></div>
-                            <a href="#">view our thought</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bullet">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </section>
-
+<!DOCTYPE html>
+<!--  This site was created in Webflow. http://www.webflow.com -->
+<!--  Last Published: Sun Apr 02 2017 07:48:41 GMT+0000 (UTC)  -->
+<html data-wf-page="58e0918451a75adf539e9e7e" data-wf-site="58e0918451a75adf539e9e7d">
+<head>
+  <meta charset="utf-8">
+  <title>Studio Grasshopper</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet"
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/studio-grasshopper.webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" type="text/javascript"></script>
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
+</head>
+<body>
+  <div class="nav">
+    <div class="flex">
+      <div class="logo flex-50">
+        <img src="images/bug-icon.png" alt="">
+      </div>
+      <div class="menu flex-50">
+        <div>menu</div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="home-intro">
+      <h1 class="heading logoname">Studio Grasshopper</h1>
+      <h1 class="heading">We do the brand<br>by architect works</h1>
+      <h1 class="heading subheading">Craft. Styled. Authentic</h1>
+    </div>
+    <div class="hero-image"><img sizes="(max-width: 767px) 100vw, 700px" src="images/house3d.png" srcset="images/house3d.png 500w, images/house3d.png 800w, images/house3d.png 1080w, images/house3d.png 1400w" width="700">
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrapper">
+      <div class="statement">
+        <h1 class="topic">Statement</h1>
+        <p class="paragraph">Creative. Energenic. Visualized. Fun.<br>Materializing perception and strengthening individuality is our challenge. Through the collective of young professionals with global experiences, we illustrate your vision into tangibles.
+          <br><br>Two-dimension to three-dimension. Photograph to computer graphic. Product to architecture. Interior to exterior.
+          <br>Still image to animation.</p>
+      </div>
+    </div>
+  </div>
+  <!--<div class="section feature">
+    <ul class="w-list-unstyled">
+      <li class="feature-item" data-background="#3498db">
+        <div class="w-clearfix wrapper">
+          <div class="head">
+            <p class="directory">Featured Project</p>
+            <h1 class="topic white">The Address 24</h1>
+          </div>
+          <div class="featured-image"><img sizes="(max-width: 479px) 100vw, 623.71875px" src="images/house3d.png" srcset="images/house3d.png 500w, images/house3d.png 800w, images/house3d.png 1080w, images/house3d.png 1400w" width="700">
+          </div><a class="button w-button" href="#">View Our Thought</a>
         </div>
+      </li>
+       <li class="feature-item" data-background="#f1c40f">
+        <div class="w-clearfix wrapper">
+          <div class="head">
+            <p class="directory">Featured Project</p>
+            <h1 class="topic white">The Home 22</h1>
+          </div>
+          <div class="featured-image"><img sizes="(max-width: 479px) 100vw, 623.71875px" src="images/house3d.png" srcset="images/house3d.png 500w, images/house3d.png 800w, images/house3d.png 1080w, images/house3d.png 1400w" width="700">
+          </div><a class="button w-button" href="#">View Our Thought</a>
+        </div>
+      </li>
+    </ul>
+  </div>-->
+  <div class="section feature">
+    <div class="wrapper flex  verticle">
+      <div class="image-idea w-clearfix">
+        <div class="feature-image">
+          <div>
+            <img sizes="329px" src="images/house3d.png">
+            <h1>The Address 24</h1>
+            <p>COLOURS AND LINES OF THE COLLECTION ADAPT TO THE ENVIRONMENT WITH VIVACITY AND PERSONALITY</p>
+            <a href="#"></a>
+          </div>
+        </div>    
+        <div class="feature-image">
+          <div>
+            <img sizes="329px" src="images/house3d.png">
+            <h1>The Address 24</h1>
+            <p>COLOURS AND LINES OF THE COLLECTION ADAPT TO THE ENVIRONMENT WITH VIVACITY AND PERSONALITY</p>
+            <a href="#"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--<div class="project section">
+    <div class="flex wrapper">
+      <div class="project-list">
+        <div class="is-relative">
+          <h1 class="topic">Projects</h1>
+          <ul class="w-list-unstyled">
+            <li class="project-list-item is-active"><a href="#link-1">The Icon Siam</a></li>
+            <li class="project-list-item"><a href="#link-2">Casa Lapin X</a></li>
+            <li class="project-list-item"><a href="#link-3">Gaysorn Shopping Mall</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="project-images">
+        <ul>
+          <li id="link-1">
+            <div class="name-asset">Casa Lapin X</div>
+            <div class="image-home">
+              <img sizes="(max-width: 479px) 100vw, 666.796875px" src="images/Rakawan_02-web.jpg" srcset="images/Rakawan_02-web.jpg 500w, images/Rakawan_02-web.jpg 800w, images/Rakawan_02-web.jpg 1000w">
+            </div>
+            <div class="image-home">
+              <img sizes="(max-width: 479px) 100vw, 666.796875px" src="images/Rakawan_02-web.jpg" srcset="images/Rakawan_02-web.jpg 500w, images/Rakawan_02-web.jpg 800w, images/Rakawan_02-web.jpg 1000w">
+            </div>
+          </li>
+          <li id="link-2">
+            <div class="name-asset">Casa Lapin X</div>
+            <div class="image-home">
+              <img sizes="(max-width: 479px) 100vw, 666.796875px" src="images/Rakawan_02-web.jpg" srcset="images/Rakawan_02-web.jpg 500w, images/Rakawan_02-web.jpg 800w, images/Rakawan_02-web.jpg 1000w">
+            </div>
+            <div class="image-home">
+              <img sizes="(max-width: 479px) 100vw, 666.796875px" src="images/Rakawan_02-web.jpg" srcset="images/Rakawan_02-web.jpg 500w, images/Rakawan_02-web.jpg 800w, images/Rakawan_02-web.jpg 1000w">
+            </div>
+          </li>
+          <li id="link-3">
+            <div class="name-asset">Casa Lapin X</div>
+            <div class="image-home">
+              <img sizes="(max-width: 479px) 100vw, 666.796875px" src="images/Rakawan_02-web.jpg" srcset="images/Rakawan_02-web.jpg 500w, images/Rakawan_02-web.jpg 800w, images/Rakawan_02-web.jpg 1000w">
+            </div>
+            <div class="image-home">
+              <img sizes="(max-width: 479px) 100vw, 666.796875px" src="images/Rakawan_02-web.jpg" srcset="images/Rakawan_02-web.jpg 500w, images/Rakawan_02-web.jpg 800w, images/Rakawan_02-web.jpg 1000w">
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="project-description">
+          <div class="is-relative">
+            <ul>
+              <li>
+                <p><strong>Client1</strong>
+                <br>The Address 24
+                <br><strong>Location</strong>
+                <br>Phayatai, Bangkok
+                <br><strong>Services</strong>
+                <br>Interior Design
+                <br><strong>Site Area</strong>
+                <br>245 sq.m.
+                <br><strong>Awards</strong>
+                <br>The Best Living Room 2011</p>
+              </li>
+              <li>
+                <p><strong>Client2</strong>
+                <br>The Address 24
+                <br><strong>Location</strong>
+                <br>Phayatai, Bangkok
+                <br><strong>Services</strong>
+                <br>Interior Design
+                <br><strong>Site Area</strong>
+                <br>245 sq.m.
+                <br><strong>Awards</strong>
+                <br>The Best Living Room 2011</p>
+              </li>
+              <li>
+                <p><strong>Client3</strong>
+                <br>The Address 24
+                <br><strong>Location</strong>
+                <br>Phayatai, Bangkok
+                <br><strong>Services</strong>
+                <br>Interior Design
+                <br><strong>Site Area</strong>
+                <br>245 sq.m.
+                <br><strong>Awards</strong>
+                <br>The Best Living Room 2011</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+  </div>-->
+  <div class="section project">
+    <div class="title">
+      project
+    </div>
 
-        
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <div class="items wrapper flex">
+      <div class="left">
+        <ul>
+          <li class="active">mode 64</li>
+          <li>casa lapin x</li>
+          <li>siam paragon</li>
+          <li>florist shop</li>
+          <li>siam center</li>
+        </ul>
+      </div>
+      <div class="right">
+        <ul>
+          <li>
+            <div class="heading width-45">
+              <h1>GAYSORN VILLAGE</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, inventore!</p>
+            </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
-        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>-->
+            <div class="images">
+              <div class="image">
+                <div class="width-45">
+                   <img sizes="329px" src="images/Rakawan_04-web.png">
+                </div>
+              </div>
+              <div class="image">
+                <div class="width-45">
+                   <img sizes="329px" src="images/Rakawan_04-web.png">
+                </div>
+              </div>
+               <div class="image">
+                <div class="width-45">
+                   <img sizes="329px" src="images/Rakawan_04-web.png">
+                </div>
+              </div>
+               <div class="image">
+                <div class="width-45">
+                   <img sizes="329px" src="images/Rakawan_04-web.png">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="heading width-45">
+              <h1>GAYSORN VILLAGE</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, inventore!</p>
+            </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/ScrollToPlugin.min.js"></script>-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+            <div class="images">
+              <div class="image">
+                <div class="width-45">
+                   <img sizes="329px" src="images/Rakawan_04-web.png">
+                </div>
+              </div>
+              <div class="image">
+                <div class="width-45">
+                   <img sizes="329px" src="images/Rakawan_04-web.png">
+                </div>
+              </div>
+               <div class="image">
+                <div class="width-45">
+                   <img sizes="329px" src="images/Rakawan_04-web.png">
+                </div>
+              </div>
+               <div class="image">
+                <div class="width-45">
+                   <img sizes="329px" src="images/Rakawan_04-web.png">
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="flex wrapper">
+      <div class="address flex-1">
+        <h1 class="companyname">Studio Grasshopper</h1>
+        <ul class="unordered-list w-list-unstyled">
+          <li class="li-address">123 Room 2 KliqueDesk
+            <br>Sukhumvit Rd. Bangkok</li>
+          <li class="li-address">hello@studiograsshopper.com</li>
+          <li class="li-address">+1-541-754-3010</li>
+        </ul>
+      </div>
+      <div class="flex-1 social"></div>
+    </div>
+  </div>
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/TextPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
 
-        <script src="js/app.js"></script>
-    </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+  
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="js/app.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+</body>
 </html>

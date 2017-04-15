@@ -40,8 +40,10 @@ gulp.task('watch', function() {
 // Catch JS errors
 gulp.task('jshint', function() {
     return gulp.src('src/js/*.js')
+        .pipe(concat('app.js'))
         .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish'))
+        .pipe(gulp.dest('js/'))
 });
 
 // Ugligy JS
