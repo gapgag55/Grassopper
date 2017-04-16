@@ -149,14 +149,87 @@ table {
 td, th {
   padding: 0; }
 
+@font-face {
+  font-family: "font-grasshoper";
+  src: url("../fonts/icon-font/font-grasshoper.eot");
+  src: url("../fonts/icon-font/font-grasshoper.eot?#iefix") format("embedded-opentype"), url("../fonts/icon-font/font-grasshoper.woff") format("woff"), url("../fonts/icon-font/font-grasshoper.ttf") format("truetype"), url("../fonts/icon-font/font-grasshoper.svg#font-grasshoper") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[data-icon]:before {
+  font-family: "font-grasshoper" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "font-grasshoper" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-address:before {
+  content: "\61"; }
+
+.icon-email:before {
+  content: "\62"; }
+
+.icon-facebook:before {
+  content: "\63"; }
+
+.icon-instagram:before {
+  content: "\64"; }
+
+.icon-phone:before {
+  content: "\65"; }
+
+.icon-twitter:before {
+  content: "\66"; }
+
 body {
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+  position: relative; }
+  body:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 90vh;
+    height: 100%;
+    border-left: 1px solid #f2f2f2;
+    border-right: 1px solid #f2f2f2; }
+  body:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    border-left: 1px solid #f2f2f2; }
 
 .wrapper {
   width: 1100px; }
 
 .width-45 {
   width: 45%; }
+
+div {
+  position: relative;
+  z-index: 2; }
 
 .nav {
   position: fixed;
@@ -319,31 +392,75 @@ body {
             font-size: 14px;
             margin-bottom: 25px;
             width: 80%; }
-        .project .items .right ul li .images .image {
-          float: left; }
-          .project .items .right ul li .images .image:after {
-            content: '';
-            clear: both; }
+        .project .items .right ul li .images .image:after {
+          content: '';
+          clear: both; }
         .project .items .right ul li:nth-child(odd) .heading {
           float: right; }
-        .project .items .right ul li:nth-child(odd) .images .image:nth-child(odd) .width-45 {
+        .project .items .right ul li:nth-child(odd) .images .image:nth-child(odd) {
           float: left; }
-        .project .items .right ul li:nth-child(odd) .images .image:nth-child(even) .width-45 {
+          .project .items .right ul li:nth-child(odd) .images .image:nth-child(odd) .width-45 {
+            float: left; }
+        .project .items .right ul li:nth-child(odd) .images .image:nth-child(even) {
           float: right; }
+          .project .items .right ul li:nth-child(odd) .images .image:nth-child(even) .width-45 {
+            float: right; }
         .project .items .right ul li:nth-child(odd) .images .image:last-child .width-45 {
           width: 60%;
           float: none;
           margin: 0 auto; }
         .project .items .right ul li:nth-child(even) .heading {
           float: left; }
-        .project .items .right ul li:nth-child(even) .images .image:nth-child(odd) .width-45 {
+        .project .items .right ul li:nth-child(even) .images .image:nth-child(odd) {
           float: right; }
-        .project .items .right ul li:nth-child(even) .images .image:nth-child(even) .width-45 {
+          .project .items .right ul li:nth-child(even) .images .image:nth-child(odd) .width-45 {
+            float: right; }
+        .project .items .right ul li:nth-child(even) .images .image:nth-child(even) {
           float: left; }
+          .project .items .right ul li:nth-child(even) .images .image:nth-child(even) .width-45 {
+            float: left; }
         .project .items .right ul li:nth-child(even) .images .image:last-child .width-45 {
           width: 60%;
           float: none;
           margin: 0 auto; }
+
+footer {
+  padding: 50px 0; }
+  footer .address li i {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+    margin-right: 10px;
+    float: left; }
+  footer .social ul {
+    display: inline-block;
+    text-align: right; }
+    footer .social ul li {
+      margin: 0 10px;
+      display: inline-block; }
+      footer .social ul li a {
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid #888;
+        position: relative;
+        display: block;
+        border: 1px solid #888;
+        color: #888;
+        opacity: .6;
+        -webkit-transition: opacity .5s ease-in-out;
+                transition: opacity .5s ease-in-out; }
+        footer .social ul li a:hover {
+          opacity: 1;
+          -webkit-transition: opacity .5s ease-in-out;
+                  transition: opacity .5s ease-in-out; }
+        footer .social ul li a i {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+          margin-top: 2px; }
 
 /* Featured project page */
 .featured-intro {
@@ -546,3 +663,52 @@ h1, p {
   h2,
   h3 {
     page-break-after: avoid; } }
+
+@font-face {
+  font-family: "font-grasshoper";
+  src: url("../fonts/icon-font/font-grasshoper.eot");
+  src: url("../fonts/icon-font/font-grasshoper.eot?#iefix") format("embedded-opentype"), url("../fonts/icon-font/font-grasshoper.woff") format("woff"), url("../fonts/icon-font/font-grasshoper.ttf") format("truetype"), url("../fonts/icon-font/font-grasshoper.svg#font-grasshoper") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[data-icon]:before {
+  font-family: "font-grasshoper" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "font-grasshoper" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-address:before {
+  content: "\61"; }
+
+.icon-email:before {
+  content: "\62"; }
+
+.icon-facebook:before {
+  content: "\63"; }
+
+.icon-instagram:before {
+  content: "\64"; }
+
+.icon-phone:before {
+  content: "\65"; }
+
+.icon-twitter:before {
+  content: "\66"; }

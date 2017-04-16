@@ -1,7 +1,32 @@
 $primary-color: #B18C35;
 
+@import 'icon-font';
+
 body {
     font-family: 'Lato', sans-serif;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90vh;
+        height: 100%;
+        border-left: 1px solid #f2f2f2;
+        border-right: 1px solid #f2f2f2;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 1px;
+        height: 100%;
+        border-left: 1px solid #f2f2f2;
+    }
 }
 
 .wrapper {
@@ -10,6 +35,12 @@ body {
 
 .width-45 {
     width: 45%;
+}
+
+
+div {
+    position: relative;
+    z-index: 2;
 }
 
 .nav {
@@ -208,8 +239,7 @@ body {
                     }
 
                     .images {
-                        .image {
-                            float: left;  
+                        .image { 
 
                             &:after {
                                 content: '';
@@ -226,18 +256,22 @@ body {
                         .images {
                             .image {
                                 &:nth-child(odd) {
+                                    float: left;
+
                                     .width-45 {
                                         float: left;
                                     }
                                 }
 
                                 &:nth-child(even) {
+                                    float: right;
                                     .width-45 {
                                         float: right;
                                     }
                                 }
 
                                 &:last-child {
+                
                                     .width-45 {
                                         width: 60%;
                                         float: none;
@@ -255,13 +289,18 @@ body {
 
                         .images {
                             .image {
+
                                 &:nth-child(odd) {
+                                    float: right;
+
                                     .width-45 {
                                         float: right;
                                     }
                                 }
 
                                 &:nth-child(even) {
+                                    float: left;
+
                                     .width-45 {
                                         float: left;
                                     }
@@ -284,6 +323,59 @@ body {
         }
     }
 
+}
+
+footer {
+    padding: 50px 0;
+
+    .address {
+        li {
+            i {
+                transform: translateY(2px);
+                margin-right: 10px;
+                float: left;
+            }
+        }
+    }
+    
+    .social {
+        ul {
+            display: inline-block;
+            text-align: right;
+
+            li {
+                margin: 0 10px;
+                display: inline-block;
+                
+                a {
+                    text-decoration: none;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    border: 1px solid #888;
+                    position: relative;
+                    display: block;
+                    border: 1px solid #888;
+                    color: #888;
+                    opacity: .6;
+                    transition: opacity .5s ease-in-out;
+
+                    &:hover {
+                        opacity: 1;
+                        transition: opacity .5s ease-in-out;
+                    }
+
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        margin-top: 2px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // .project-list {

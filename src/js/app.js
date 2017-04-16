@@ -9,8 +9,7 @@
         this.statement();
         this.feature();
         this.project();
-        // this.projectFix();
-        // this.navigator();
+        this.footer();
 
         /* Featured project */
         this.intro();
@@ -110,7 +109,8 @@
         new ScrollMagic.Scene({
             triggerElement: heading,
             triggerHook: 0,
-            offset: -($(heading).height()) - 20,
+            offset: -($(heading).height()) - 100,
+            duration: '40%'
         })
         .setPin(heading)
         .setTween(fadeOut)
@@ -137,6 +137,51 @@
                 }
             })
         })
+    }
+
+    Animation.prototype.footer = function() {
+
+        var address_heading = '.footer .companyname';
+        var address_body = '.footer .address ul';
+        var social = '.footer .social li';
+
+        var tween = new TimelineMax();
+        tween.add([
+            TweenMax.fromTo(address_heading, 1, {
+                autoAlpha: 0,
+                y: 0
+            }, {
+                autoAlpha: 1,
+                y: -50,
+                ease: Power4.easeNone
+            }),
+            TweenMax.fromTo(address_body, .5, {
+                autoAlpha: 0,
+                y: 0
+            }, {
+                autoAlpha: 1,
+                y: -50,
+                delay:0.5,
+                ease: Power4.easeNone
+            }),
+            TweenMax.staggerFromTo(social, .5, {
+                autoAlpha: 0,
+                y: 50
+            }, {
+                autoAlpha: 1,
+                y: 0
+            }, .2)
+        ])
+        
+         new ScrollMagic.Scene({
+            triggerElement: '.footer',
+            triggerHook: .8
+        })
+        .setTween(tween)
+        .addTo(controller)
+
+
+
     }
 
     // Animation.prototype.projectFix = function() {
@@ -368,8 +413,7 @@
                 y: optional.y,
                 autoAlpha: 1,
                 scale: 1,
-                ease: Linear.easeNone,
-                offset: -400
+                offset: 0
             })
         ])
     
