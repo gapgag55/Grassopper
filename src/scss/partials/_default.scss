@@ -1,8 +1,12 @@
+@import 'font-prajad';
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', 'cs_prajadregular';
     position: relative;
     overflow-x: hidden;
+    p {
+        color: #888;
+    }
 
     &:before {
         content: '';
