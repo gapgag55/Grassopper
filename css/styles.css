@@ -149,6 +149,79 @@ table {
 td, th {
   padding: 0; }
 
+body {
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  overflow-x: hidden; }
+  body:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 90vh;
+    height: 100%;
+    border-left: 1px solid #f2f2f2;
+    border-right: 1px solid #f2f2f2; }
+  body:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    border-left: 1px solid #f2f2f2; }
+
+div {
+  position: relative;
+  z-index: 2; }
+
+ul {
+  width: 100%;
+  padding: 0; }
+
+h1, p {
+  margin: 0; }
+
+.wrapper {
+  display: block;
+  position: relative;
+  width: 1100px; }
+
+.width-700,
+.width-800 {
+  margin: 0 auto; }
+
+.width-700 {
+  width: 700px; }
+
+.width-800 {
+  width: 800px; }
+
+.verticle {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.flex-1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+
+.flex-50 {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%; }
+
+.width-45 {
+  width: 45%; }
+
 @font-face {
   font-family: "font-grasshoper";
   src: url("../fonts/icon-font/font-grasshoper.eot");
@@ -197,39 +270,6 @@ td, th {
 
 .icon-twitter:before {
   content: "\66"; }
-
-body {
-  font-family: 'Lato', sans-serif;
-  position: relative; }
-  body:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    width: 90vh;
-    height: 100%;
-    border-left: 1px solid #f2f2f2;
-    border-right: 1px solid #f2f2f2; }
-  body:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 1px;
-    height: 100%;
-    border-left: 1px solid #f2f2f2; }
-
-.wrapper {
-  width: 1100px; }
-
-.width-45 {
-  width: 45%; }
-
-div {
-  position: relative;
-  z-index: 2; }
 
 .nav {
   position: fixed;
@@ -305,15 +345,8 @@ div {
     .feature a:hover:before {
       color: #fff; }
 
-.is-relative {
-  position: relative; }
-
-.is-fixed {
-  position: fixed;
-  top: 0; }
-
 .home-intro {
-  height: 60vh;
+  height: 75vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,7 +359,21 @@ div {
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  text-transform: uppercase; }
+  .home-intro .logoname {
+    letter-spacing: 4px;
+    font-size: 17px; }
+  .home-intro .title {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 70px;
+    letter-spacing: 3px;
+    line-height: 80px; }
+  .home-intro .subheading {
+    font-size: 27px;
+    letter-spacing: 4px;
+    margin-top: 10px; }
 
 .statement {
   padding-top: 75px;
@@ -385,6 +432,15 @@ div {
             letter-spacing: 3px;
             margin: 20px 0;
             margin-top: 35px; }
+          .project .items .right ul li .heading h3 {
+            font-size: 20px;
+            font-weight: normal;
+            letter-spacing: 2px;
+            line-height: 1.8;
+            padding-bottom: 20px;
+            padding-top: 10px;
+            width: 80%;
+            text-transform: uppercase; }
           .project .items .right ul li .heading p {
             font-weight: 300;
             letter-spacing: 1px;
@@ -463,130 +519,51 @@ footer {
           margin-top: 2px; }
 
 /* Featured project page */
-.featured-intro {
-  padding: 50px 0; }
-  .featured-intro .wrapper {
-    height: calc(100vh - 50px);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-    .featured-intro .wrapper div {
-      text-align: center;
-      -webkit-transform: translateY(-50%);
-              transform: translateY(-50%); }
-      .featured-intro .wrapper div p {
-        color: #989898;
-        margin-bottom: 5px; }
-      .featured-intro .wrapper div h1 {
-        color: #B18C35;
-        font-size: 70px; }
-  .featured-intro .background {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    visibility: hidden;
-    top: 0; }
-
-.task .topic {
-  text-align: center;
-  color: #B18C35;
-  font-size: 35px; }
-
-.task ul {
-  margin: 20px 0; }
-  .task ul li {
-    color: #9D9D9D;
-    padding: 5px 0; }
-  .task ul li:first-child {
-    color: #B18C35; }
-
-.family .background {
-  width: 100%;
-  height: 600px;
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.family .wrapper {
-  padding: 100px 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-  .family .wrapper .background {
-    background-size: cover;
-    background-position: center; }
-  .family .wrapper .intro {
-    text-align: center;
-    padding: 40px 100px; }
-    .family .wrapper .intro h1 {
-      color: #B18C35; }
-
-.branding .topic {
-  text-align: center;
-  color: #B18C35;
-  font-size: 35px; }
-
-.image-idea {
-  padding: 50px 0; }
-  .image-idea div:nth-child(even) {
-    text-align: right; }
-  .image-idea div:nth-child(odd) {
-    text-align: left; }
-
-.material {
-  padding: 50px 0;
-  position: relative;
-  overflow: hidden; }
-  .material .topic {
-    text-align: center;
-    color: #B18C35;
-    font-size: 35px; }
-  .material .parallax {
-    background-size: cover;
-    width: 100%;
-    height: 120%;
-    position: absolute;
-    top: 0;
-    left: 0; }
-  .material .material-item {
-    padding: 40px 0;
-    text-align: center; }
-    .material .material-item .background {
-      background-size: cover;
-      border-radius: 50%;
-      width: 100px;
-      height: 100px;
-      margin: 0 auto; }
-    .material .material-item p {
-      color: #B18C35;
-      margin: 15px 0; }
-
-.it-is p {
-  margin: 30px 0; }
-
-.texture .topic, .branding .topic, .it-is .topic {
-  text-align: center;
-  color: #B18C35;
-  font-size: 35px; }
-
-.texture, .sketch, .it-is {
-  padding: 50px 0; }
+.slide {
+  height: 100vh; }
+  .slide a {
+    display: block;
+    max-width: 700px; }
 
 body {
+  font-family: 'Lato', sans-serif;
+  position: relative;
   overflow-x: hidden; }
+  body:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 90vh;
+    height: 100%;
+    border-left: 1px solid #f2f2f2;
+    border-right: 1px solid #f2f2f2; }
+  body:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    border-left: 1px solid #f2f2f2; }
+
+div {
+  position: relative;
+  z-index: 2; }
+
+ul {
+  width: 100%;
+  padding: 0; }
+
+h1, p {
+  margin: 0; }
 
 .wrapper {
   display: block;
-  position: relative; }
+  position: relative;
+  width: 1100px; }
 
 .width-700,
 .width-800 {
@@ -604,13 +581,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column; }
 
-ul {
-  width: 100%;
-  padding: 0; }
-
-h1, p {
-  margin: 0; }
-
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -624,6 +594,9 @@ h1, p {
 .flex-50 {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%; }
+
+.width-45 {
+  width: 45%; }
 
 @media print {
   * {

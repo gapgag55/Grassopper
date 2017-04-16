@@ -131,9 +131,9 @@
                 })
 
                 if(index != items.length - 1) {
-                    fadeUp(value, {y: -(index * 100)})
+                    fadeUp(value, {y: -((index + 1) * 100)})
                 } else {
-                    fadeUp(value, {y: -100})
+                    fadeUp(value, {y: -(index * 50)})
                 }
             })
         })
